@@ -20,13 +20,12 @@ namespace myclinic_tabs
             InitializeComponent();
         }
 
-
-
         private void btnShowDoctors_Click(object sender, EventArgs e)
         {
 
             string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
             #region fill DataGrid using myclinic database doctors table
+
 
 
             using (SqlConnection sqlcon = new SqlConnection(conStr))
@@ -43,16 +42,15 @@ namespace myclinic_tabs
                 //bind data to grid view
                 dataGridView1.DataSource = datatable;
                 #endregion
-
-
             }
+
+
+
             #endregion
         }
 
         private void btn_addPatient_Click(object sender, EventArgs e)
         {
-
-
             Patient patient = new Patient();
             patient.PAT_ID = txt_patientID.Text;
             patient.PAT_FNAME = txt_patientFName.Text;
@@ -98,6 +96,38 @@ namespace myclinic_tabs
 
         }
 
-        
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+
+
+            string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
+            #region fill DataGrid using Bickstores database
+
+
+            using (SqlConnection sqlcon = new SqlConnection(conStr))
+            {
+                sqlcon.Open();
+                #region select query with no parameters
+                
+                //select all query 
+                SqlDataAdapter sqldataadapter = new SqlDataAdapter("select * from DRUG", sqlcon);
+                ////create dataTable to store the retrieved data
+                DataTable datatable = new DataTable();
+                //fill retrieved data to data table
+                sqldataadapter.Fill(datatable);
+                
+                //bind data to combobox
+                List<Drug> Drugs = new List<Drug>();
+                foreach (DataRow row in datatable.Rows)
+                {
+                    Drug drug = new Drug() { DRUG_CODE = row["DRUG_CODE"].ToString(), DRUG_NAME = row["DRUG_NAME"].ToString()};
+                    Drugs.Add(drug);
+                }
+
+                comboBox_listDrugs.DataSource = Drugs.Select(x => x.DRUG_NAME).ToList();
+                #endregion
+            }
+            #endregion
+        }
     }
 }

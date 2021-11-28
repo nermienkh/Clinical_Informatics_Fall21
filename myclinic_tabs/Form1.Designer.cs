@@ -47,16 +47,20 @@ namespace myclinic_tabs
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox_listDrugs = new System.Windows.Forms.ComboBox();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
             // 
             this.tabMain.Controls.Add(this.tabPage2);
             this.tabMain.Controls.Add(this.tabPage1);
+            this.tabMain.Controls.Add(this.tabPage3);
             this.tabMain.Location = new System.Drawing.Point(27, 17);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -222,6 +226,25 @@ namespace myclinic_tabs
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.comboBox_listDrugs);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(739, 390);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Drug";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_listDrugs
+            // 
+            this.comboBox_listDrugs.FormattingEnabled = true;
+            this.comboBox_listDrugs.Location = new System.Drawing.Point(27, 56);
+            this.comboBox_listDrugs.Name = "comboBox_listDrugs";
+            this.comboBox_listDrugs.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_listDrugs.TabIndex = 0;
+            this.comboBox_listDrugs.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +258,7 @@ namespace myclinic_tabs
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -259,5 +283,7 @@ namespace myclinic_tabs
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ComboBox comboBox_listDrugs;
     }
 }
