@@ -61,7 +61,7 @@ namespace myclinic_tabs
 
             //database insert patient
             string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
-            #region insert into Bickstores database
+            #region insert into Patient table
             using (SqlConnection sqlcon = new SqlConnection(conStr))
             {
                 sqlcon.Open();
