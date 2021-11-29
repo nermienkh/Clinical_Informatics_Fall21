@@ -170,5 +170,10 @@ namespace myclinic_tabs
 
 
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

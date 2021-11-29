@@ -53,11 +53,13 @@ namespace myclinic_tabs
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_drugCode = new System.Windows.Forms.TextBox();
             this.comboBox_listDrugs = new System.Windows.Forms.ComboBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -73,6 +75,7 @@ namespace myclinic_tabs
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.btnShowDoctors);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -98,7 +101,7 @@ namespace myclinic_tabs
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 38);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(661, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(231, 308);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage1
@@ -288,6 +291,14 @@ namespace myclinic_tabs
             this.comboBox_listDrugs.TabIndex = 0;
             this.comboBox_listDrugs.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(401, 80);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +314,7 @@ namespace myclinic_tabs
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,5 +345,6 @@ namespace myclinic_tabs
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblDrugStatus;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
