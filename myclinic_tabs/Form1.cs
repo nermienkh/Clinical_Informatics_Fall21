@@ -129,5 +129,46 @@ namespace myclinic_tabs
             }
             #endregion
         }
+
+        private void btnFindDrugByCode_Click(object sender, EventArgs e)
+        {
+            string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
+            #region find drug by code 
+
+
+            using (SqlConnection sqlcon = new SqlConnection(conStr))
+            {
+                sqlcon.Open();
+
+
+                #region select query with  parameters
+                //select all query with parameter
+                SqlCommand command = new SqlCommand("SELECT * FROM DRUG" + " WHERE [DRUG_CODE] = @drugcode", sqlcon);
+                // Add parameters and values to SelectCommand .
+                command.Parameters.Add("@drugcode", SqlDbType.VarChar).Value = textBox_drugCode.Text;
+               
+                //specify command type [text or stored procedure]
+                command.CommandType = CommandType.Text;
+                //pass command to new instance of sqlDataAdapter 
+                SqlDataAdapter adp = new SqlDataAdapter(command);
+                //create dataTable to store the retrieved data
+                DataTable dataTable2 = new DataTable();
+                //fill retrieved data to data table
+                adp.Fill(dataTable2);
+                //bind data to grid view
+
+                if (dataTable2.Rows.Count!=0)
+                    lblDrugStatus.Text ="Drug Found" ;
+                else
+                    lblDrugStatus.Text = "Drug not Found";
+                #endregion
+            }
+
+            #endregion
+
+
+
+
+        }
     }
 }

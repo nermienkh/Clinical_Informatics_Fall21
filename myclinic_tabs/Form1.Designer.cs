@@ -48,6 +48,10 @@ namespace myclinic_tabs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblDrugStatus = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_drugCode = new System.Windows.Forms.TextBox();
             this.comboBox_listDrugs = new System.Windows.Forms.ComboBox();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -228,6 +232,10 @@ namespace myclinic_tabs
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.lblDrugStatus);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.textBox_drugCode);
             this.tabPage3.Controls.Add(this.comboBox_listDrugs);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -235,6 +243,41 @@ namespace myclinic_tabs
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Drug";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "find drug by code ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnFindDrugByCode_Click);
+            // 
+            // lblDrugStatus
+            // 
+            this.lblDrugStatus.AutoSize = true;
+            this.lblDrugStatus.Location = new System.Drawing.Point(329, 179);
+            this.lblDrugStatus.Name = "lblDrugStatus";
+            this.lblDrugStatus.Size = new System.Drawing.Size(59, 13);
+            this.lblDrugStatus.TabIndex = 4;
+            this.lblDrugStatus.Text = "drug status";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(245, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "drug status";
+            // 
+            // textBox_drugCode
+            // 
+            this.textBox_drugCode.Location = new System.Drawing.Point(122, 176);
+            this.textBox_drugCode.Name = "textBox_drugCode";
+            this.textBox_drugCode.Size = new System.Drawing.Size(100, 20);
+            this.textBox_drugCode.TabIndex = 1;
             // 
             // comboBox_listDrugs
             // 
@@ -259,6 +302,7 @@ namespace myclinic_tabs
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -285,5 +329,9 @@ namespace myclinic_tabs
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ComboBox comboBox_listDrugs;
+        private System.Windows.Forms.TextBox textBox_drugCode;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblDrugStatus;
+        private System.Windows.Forms.Label label8;
     }
 }
