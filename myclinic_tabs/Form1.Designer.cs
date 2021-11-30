@@ -277,7 +277,7 @@ namespace myclinic_tabs
             // 
             // textBox_drugCode
             // 
-            this.textBox_drugCode.Location = new System.Drawing.Point(122, 176);
+            this.textBox_drugCode.Location = new System.Drawing.Point(139, 176);
             this.textBox_drugCode.Name = "textBox_drugCode";
             this.textBox_drugCode.Size = new System.Drawing.Size(100, 20);
             this.textBox_drugCode.TabIndex = 1;
@@ -295,7 +295,7 @@ namespace myclinic_tabs
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Crimson;
-            this.label7.Location = new System.Drawing.Point(23, 63);
+            this.label7.Location = new System.Drawing.Point(15, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 6;
