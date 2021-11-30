@@ -60,10 +60,16 @@ namespace myclinic_tabs
             patient.PAT_DOB = dateTimePicker_PatientDOB.Value;
 
             //database insert patient
+
+
+
             string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
             #region insert into Patient table
             using (SqlConnection sqlcon = new SqlConnection(conStr))
             {
+
+
+
                 sqlcon.Open();
                 try
                 {
