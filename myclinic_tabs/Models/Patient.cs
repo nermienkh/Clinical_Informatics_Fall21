@@ -8,7 +8,6 @@ namespace myclinic_tabs.Models
 {
     class Patient
     {
-
         public string PAT_ID { get; set; }
         public string PAT_NationalID { get; set; }
         public string PAT_FNAME { get; set; }

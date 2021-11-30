@@ -95,11 +95,6 @@ namespace myclinic_tabs
             }
             #endregion
 
-
-
-
-
-
         }
 
         private void comboBox1_DropDown(object sender, EventArgs e)
