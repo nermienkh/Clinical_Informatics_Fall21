@@ -12,7 +12,7 @@ namespace myclinic_tabs.Models
         [Required(ErrorMessage = "ID is required")]
         public string PAT_ID { get; set; }
         [Required]
-        [RegularExpression("(2|3)[0-9][1-9][0-1][1-9][0-3][1-9](01|02|03|04|11|12|13|14|15|16|17|18|19|21|22|23|24|25|26|27|28|29|31|32|33|34|35|88)",ErrorMessage ="Please enter a valid Natinal ID")]
+        [RegularExpression("^([1-9]{1}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[0-9]{2}[0-9]{5})$", ErrorMessage ="Please enter a valid Natinal ID")]
         public string PAT_NationalID { get; set; }
         [StringLength(10)]
         public string PAT_FNAME { get; set; }
