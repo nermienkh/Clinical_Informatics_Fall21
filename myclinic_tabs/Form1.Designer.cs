@@ -34,6 +34,12 @@ namespace myclinic_tabs
             this.btnShowDoctors = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Lbl_DoBError = new System.Windows.Forms.Label();
+            this.Lbl_PhoneError = new System.Windows.Forms.Label();
+            this.Lbl_NIDError = new System.Windows.Forms.Label();
+            this.Lbl_LNameError = new System.Windows.Forms.Label();
+            this.Lbl_FNameError = new System.Windows.Forms.Label();
+            this.Lbl_IDError = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_patientID = new System.Windows.Forms.TextBox();
             this.txt_patientPhone = new System.Windows.Forms.TextBox();
@@ -48,12 +54,12 @@ namespace myclinic_tabs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblDrugStatus = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_drugCode = new System.Windows.Forms.TextBox();
             this.comboBox_listDrugs = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -104,6 +110,12 @@ namespace myclinic_tabs
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Lbl_DoBError);
+            this.tabPage1.Controls.Add(this.Lbl_PhoneError);
+            this.tabPage1.Controls.Add(this.Lbl_NIDError);
+            this.tabPage1.Controls.Add(this.Lbl_LNameError);
+            this.tabPage1.Controls.Add(this.Lbl_FNameError);
+            this.tabPage1.Controls.Add(this.Lbl_IDError);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txt_patientID);
             this.tabPage1.Controls.Add(this.txt_patientPhone);
@@ -124,6 +136,54 @@ namespace myclinic_tabs
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Patient";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_DoBError
+            // 
+            this.Lbl_DoBError.AutoSize = true;
+            this.Lbl_DoBError.Location = new System.Drawing.Point(370, 176);
+            this.Lbl_DoBError.Name = "Lbl_DoBError";
+            this.Lbl_DoBError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_DoBError.TabIndex = 19;
+            // 
+            // Lbl_PhoneError
+            // 
+            this.Lbl_PhoneError.AutoSize = true;
+            this.Lbl_PhoneError.Location = new System.Drawing.Point(370, 144);
+            this.Lbl_PhoneError.Name = "Lbl_PhoneError";
+            this.Lbl_PhoneError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_PhoneError.TabIndex = 18;
+            // 
+            // Lbl_NIDError
+            // 
+            this.Lbl_NIDError.AutoSize = true;
+            this.Lbl_NIDError.Location = new System.Drawing.Point(370, 110);
+            this.Lbl_NIDError.Name = "Lbl_NIDError";
+            this.Lbl_NIDError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_NIDError.TabIndex = 17;
+            // 
+            // Lbl_LNameError
+            // 
+            this.Lbl_LNameError.AutoSize = true;
+            this.Lbl_LNameError.Location = new System.Drawing.Point(370, 76);
+            this.Lbl_LNameError.Name = "Lbl_LNameError";
+            this.Lbl_LNameError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_LNameError.TabIndex = 16;
+            // 
+            // Lbl_FNameError
+            // 
+            this.Lbl_FNameError.AutoSize = true;
+            this.Lbl_FNameError.Location = new System.Drawing.Point(368, 39);
+            this.Lbl_FNameError.Name = "Lbl_FNameError";
+            this.Lbl_FNameError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_FNameError.TabIndex = 15;
+            // 
+            // Lbl_IDError
+            // 
+            this.Lbl_IDError.AutoSize = true;
+            this.Lbl_IDError.Location = new System.Drawing.Point(368, 13);
+            this.Lbl_IDError.Name = "Lbl_IDError";
+            this.Lbl_IDError.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_IDError.TabIndex = 14;
             // 
             // label6
             // 
@@ -246,6 +306,16 @@ namespace myclinic_tabs
             this.tabPage3.Text = "Drug";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Crimson;
+            this.label7.Location = new System.Drawing.Point(15, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "List of Drug";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(3, 173);
@@ -290,16 +360,6 @@ namespace myclinic_tabs
             this.comboBox_listDrugs.Size = new System.Drawing.Size(121, 21);
             this.comboBox_listDrugs.TabIndex = 0;
             this.comboBox_listDrugs.DropDown += new System.EventHandler(this.comboBox1_DropDown);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Crimson;
-            this.label7.Location = new System.Drawing.Point(15, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "List of Drug";
             // 
             // Form1
             // 
@@ -347,5 +407,11 @@ namespace myclinic_tabs
         private System.Windows.Forms.Label lblDrugStatus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Lbl_DoBError;
+        private System.Windows.Forms.Label Lbl_PhoneError;
+        private System.Windows.Forms.Label Lbl_NIDError;
+        private System.Windows.Forms.Label Lbl_LNameError;
+        private System.Windows.Forms.Label Lbl_FNameError;
+        private System.Windows.Forms.Label Lbl_IDError;
     }
 }
