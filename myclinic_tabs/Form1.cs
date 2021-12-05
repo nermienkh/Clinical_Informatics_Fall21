@@ -69,7 +69,6 @@ namespace myclinic_tabs
             {
                 foreach (var item in errors)
                 {
-
                     switch (item.MemberNames.First())
                     {
                         case "PAT_ID":
@@ -92,12 +91,7 @@ namespace myclinic_tabs
                             MessageBox.Show(item.ErrorMessage);
                             break;
                     }
-
-
                 }
-
-
-
             }
             else
             {

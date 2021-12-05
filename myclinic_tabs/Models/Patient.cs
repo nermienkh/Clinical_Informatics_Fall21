@@ -20,7 +20,7 @@ namespace myclinic_tabs.Models
         public DateTime PAT_DOB { get; set; }
         [RegularExpression("(201)[0-9]{9}")]
         public string PAT_PHONE { get; set; }
-        [Range(1, 150, ErrorMessage = "Age must be between 1 and 150")]
-        public int Age { set; get; }
+        //[Range(1, 150, ErrorMessage = "Age must be between 1 and 150")]
+        //public int Age { set; get; }
     }
 }
