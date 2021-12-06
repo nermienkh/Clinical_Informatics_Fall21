@@ -52,8 +52,6 @@ namespace myclinic_tabs
 
         private void btn_addPatient_Click(object sender, EventArgs e)
         {
-
-
             Patient patient = new Patient();
             patient.PAT_ID = txt_patientID.Text;
             patient.PAT_FNAME = txt_patientFName.Text;
@@ -61,8 +59,8 @@ namespace myclinic_tabs
             patient.PAT_NationalID = txt_patientNationalID.Text;
             patient.PAT_PHONE = txt_patientPhone.Text;
             patient.PAT_DOB = dateTimePicker_PatientDOB.Value;
-
-            //Validation
+            
+            //Patient Validation
             ValidationContext validationContext = new ValidationContext(patient);
             IList<ValidationResult> errors = new List<ValidationResult>();
             if (!Validator.TryValidateObject(patient, validationContext, errors, true))
@@ -88,12 +86,13 @@ namespace myclinic_tabs
                             Lbl_DoBError.Text = item.ErrorMessage;
                             break;
                         default:
+                            //MessageBox Comment 
                             MessageBox.Show(item.ErrorMessage);
                             break;
                     }
                 }
             }
-            else
+            else 
             {
                 //database insert patient
                 string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
