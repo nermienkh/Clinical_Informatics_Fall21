@@ -86,7 +86,7 @@ namespace myclinic_tabs
                             Lbl_DoBError.Text = item.ErrorMessage;
                             break;
                         default:
-                            //MessageBox Comment 
+                            
                             MessageBox.Show(item.ErrorMessage);
                             break;
                     }
